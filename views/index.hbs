@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+    
+</head>
+
+<body>
+
+    {{> header}}
+
+<h1> Shoes Management</h1>
+    <table>
+        <tr>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Type</th>
+        <th>Size</th>
+        <th>Brand</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Delete</th>
+        </tr>
+        {{#each model}}
+        <tr>
+            <td>{{NameShoe}}</td>
+            <td>{{color}}</td>
+            <td>{{type}}</td>
+            <td>{{size}}</td>
+            <td>{{brand}}</td>
+            <td>{{amount}}</td>
+            <td>{{price}}</td>
+            <td><a class="btn" href="/delete?id={{_id}}" onclick="return confirmDelete('{{NameShoe}}')">Delete</a></td>
+        </tr>
+        {{/each}}
+    </table>
+    {{> footer}}
+
+    <script>
+        function confirmDelete(name) {
+            return confirm('Are you sure that you want to delete ' + name);
+        }
+    </script>
+
+
+</body>
+
+</html>

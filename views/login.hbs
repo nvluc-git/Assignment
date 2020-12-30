@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>   
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <center>
+        <div class="box">
+            <h1>Login</h1>
+            <form action="/doLogin" method="post">
+                Username <input type="text" name="username" id="" class="email">
+                <br>
+                <br>
+                Password <input type="password" name="password" id="" class="password">
+                <br>
+                {{error}}
+                <input type="submit" value="Login" class="btn">
+            </form>
+        </div>
+
+    </center>
+
+</body>
+
+</html>
